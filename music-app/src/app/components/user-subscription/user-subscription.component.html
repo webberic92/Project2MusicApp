@@ -1,0 +1,21 @@
+<app-nav [navItems] ="NonSubNav"></app-nav>
+<div [hidden] = "submitted">
+<div class="container">
+  <div>
+    <h3 align="center">If you subscribe today for just <h1 align="center">$9.99</h1> you get unlimited skips!</h3>
+    <h3 align="center">As well as access to more songs later on!</h3>
+  </div>
+  <div class="input">
+    <form (ngSubmit) = "onSubmit()" class="option" id="credit">
+      <input class="cc-number" maxlength="19" name="credit-number" pattern="\d*" placeholder="Card Number" type="tel" />
+      <input class="cc-expires" maxlength="2" name="credit-expires" pattern="\d*" placeholder="Month (digits)" type="tel" />
+      <input class="cc-expires" maxlength="4" name="credit-expires" pattern="\d*" placeholder="Year" type="tel" />
+      <input class="cc-cvc" maxlength="3" name="credit-cvc" pattern="\d*" placeholder="CVV" type="tel" />
+      <button type="submit">Pay Now</button>
+    </form>
+  </div>
+</div>
+</div>
+<div [hidden] ="!submitted">
+    <h3>You're now subscribed</h3>
+</div>
